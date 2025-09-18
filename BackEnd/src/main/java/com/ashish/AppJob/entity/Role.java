@@ -1,4 +1,6 @@
 package com.ashish.AppJob.entity;
 
-public class Role {
+public enum Role {
+    STUDENT,
+    RECRUITER
 }
