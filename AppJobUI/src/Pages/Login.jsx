@@ -9,6 +9,9 @@ function Login() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+    const googleLoginUrl = "http://localhost:8080/oauth2/authorization/google";
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
@@ -41,7 +44,6 @@ function Login() {
       setError('Invalid email or password. Please try again.');
     }
 
-    const googleLoginUrl = "http://localhost:8080/oauth2/authorization/google";
   };
   return (
     <div className='flex justify-center items-center min-h-screen bg-gray-800'>
