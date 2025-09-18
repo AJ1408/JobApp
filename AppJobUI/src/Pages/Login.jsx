@@ -40,6 +40,8 @@ function Login() {
       console.error('Login failed:', err);
       setError('Invalid email or password. Please try again.');
     }
+
+    const googleLoginUrl = "http://localhost:8080/oauth2/authorization/google";
   };
   return (
     <div className='flex justify-center items-center min-h-screen bg-gray-800'>
@@ -69,6 +71,17 @@ function Login() {
            >
             Login
            </button>
+
+           <div className="my-4 flex items-center before:flex-1 before:border-t before:border-gray-300 after:flex-1 after:border-t after:border-gray-300">
+            <p className="text-center font-semibold mx-4">OR</p>
+        </div>
+
+        {/* ✅ Add the Google Login Button */}
+        <a href={googleLoginUrl}
+           className="w-full flex justify-center items-center bg-white text-gray-700 border border-gray-300 py-2 rounded-lg hover:bg-gray-100">
+          <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" className="w-5 h-5 mr-2" />
+          <span>Login with Google</span>
+        </a>
         </form>
         <p className="text-center mt-4 text-gray-600">
           Don't have an account?
