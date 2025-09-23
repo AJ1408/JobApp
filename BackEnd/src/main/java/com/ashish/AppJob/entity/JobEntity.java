@@ -21,5 +21,4 @@ public class JobEntity {
     private Integer reqExperience;
     @ElementCollection
     private List<String> postTechStack; // Store as a comma-separated string
-
 }

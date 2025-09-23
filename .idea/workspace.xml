@@ -5,40 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbd5483f-6ac5-4984-986a-82cb4e3cb8be" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AppJob.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AppJob.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/AppJobApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/controller/JobController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/entity/JobEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/repo/JobRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/repo/UserRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/service/JobService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/service/MyUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/service/UserPrincipal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/java/com/ashish/AppJob/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJob/src/test/java/com/ashish/AppJob/AppJobApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/Dto/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/Dto/JwtResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/Dto/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/Dto/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/Dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/Dto/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/config/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/config/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/controller/JobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/entity/JobEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/entity/JobEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/service/JobService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/service/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/service/OAuth2AuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/ashish/AppJob/service/OAuth2AuthenticationSuccessHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

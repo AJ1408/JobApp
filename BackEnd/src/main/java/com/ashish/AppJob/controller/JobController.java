@@ -3,6 +3,7 @@ package com.ashish.AppJob.controller;
 import com.ashish.AppJob.entity.JobEntity;
 import com.ashish.AppJob.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,17 +43,45 @@ public class JobController {
 
     @PostMapping()
     @PreAuthorize("hasRole('RECRUITER')")
-    public String addJob( @RequestBody JobEntity jobPost){
-        service.addJob(jobPost);
-        return "Job Added Successfully";
+    public ResponseEntity<JobEntity> addJob(@RequestBody JobEntity jobPost) {
+        try {
+            // Debug log the received data
+            System.out.println("Received job data: " + jobPost);
+            System.out.println("Tech stack received: " + jobPost.getPostTechStack());
+
+            JobEntity savedJob = service.addJob(jobPost);  // Make sure service.addJob returns JobEntity
+
+            // Debug log the saved data
+            System.out.println("Saved job: " + savedJob);
+            System.out.println("Saved tech stack: " + savedJob.getPostTechStack());
+
+            return ResponseEntity.ok(savedJob);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Failed to add job: " + e.getMessage());
+        }
     }
 
     @PutMapping("/{postId}")
     @PreAuthorize("hasRole('RECRUITER')")
-    public String updateJob( @PathVariable Integer postId, @RequestBody JobEntity jobPost){
-        jobPost.setPostId(postId);
-        service.updateJob(jobPost);
-        return "Job Updated Successfully";
+    public ResponseEntity<JobEntity> updateJob(@PathVariable Integer postId, @RequestBody JobEntity jobPost) {
+        try {
+            // Debug log the received data
+            System.out.println("Received job data: " + jobPost);
+            System.out.println("Tech stack received: " + jobPost.getPostTechStack());
+
+            jobPost.setPostId(postId);
+            JobEntity updatedJob = service.updateJob(jobPost);  // Make sure service.updateJob returns JobEntity
+
+            // Debug log the saved data
+            System.out.println("Updated job: " + updatedJob);
+            System.out.println("Saved tech stack: " + updatedJob.getPostTechStack());
+
+            return ResponseEntity.ok(updatedJob);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Failed to update job: " + e.getMessage());
+        }
     }
 
     @DeleteMapping("/{postId}")
