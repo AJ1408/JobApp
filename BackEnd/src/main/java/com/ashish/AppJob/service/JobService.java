@@ -1,6 +1,7 @@
 package com.ashish.AppJob.service;
 
 import com.ashish.AppJob.entity.JobEntity;
+import com.ashish.AppJob.entity.User;
 import com.ashish.AppJob.repo.JobRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,8 @@ public class JobService {
     @Autowired
     private JobRepo repo ;
 
-    public JobEntity addJob(JobEntity jobPost){
+    public JobEntity addJob(JobEntity jobPost, User recruiter){
+        jobPost.setRecruiter(recruiter);
         repo.save(jobPost);
         return jobPost;
     }
@@ -32,12 +34,27 @@ public class JobService {
     }
 
     public JobEntity updateJob(JobEntity jobPost){
-        repo.save(jobPost);
-        return jobPost;
+        JobEntity existing = repo.findById(jobPost.getPostId())
+                .orElseThrow(() -> new RuntimeException("Job not found"));
+
+        // Update only necessary fields
+        existing.setPostProfile(jobPost.getPostProfile());
+        existing.setPostDesc(jobPost.getPostDesc());
+        existing.setReqExperience(jobPost.getReqExperience());
+        existing.setPostTechStack(jobPost.getPostTechStack());
+
+        // Recruiter ko preserve karo
+        existing.setRecruiter(existing.getRecruiter());
+
+        return repo.save(existing);
     }
 
     public List<JobEntity> search(String keyword){
         return repo.findByPostProfileContainingIgnoreCaseOrPostDescContainingIgnoreCase(keyword, keyword);
+    }
+
+    public List<JobEntity> getJobsByRecruiter(int userId) {
+        return repo.findByRecruiter_UserId(userId);
     }
 //    public void load() {
 //        List<JobEntity> jobs = List.of(

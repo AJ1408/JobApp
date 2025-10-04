@@ -16,9 +16,22 @@ public class JobEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int postId;
+
     private String postProfile;
     private String postDesc;
     private Integer reqExperience;
+
     @ElementCollection
-    private List<String> postTechStack; // Store as a comma-separated string
+    @CollectionTable(
+            name = "job_tech_stack",
+            joinColumns = @JoinColumn(name = "job_id")
+    )
+    @Column(name = "tech")
+    private List<String> postTechStack;
+
+    // Add recruiter relationship
+    @ManyToOne
+    @JoinColumn(name = "recruiter_id", nullable = true) // allow null first
+    private User recruiter;
+
 }
